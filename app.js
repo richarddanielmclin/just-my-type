@@ -28,6 +28,7 @@ let currentSentence = sentenceArray[sentenceCounter]
 $(document).keydown(function (e) {
     if ('Shift' === e.key) {
         upperKeyboard.show();
+        lowerKeyboard.hide();
     }
     if (letterCounter == sentenceArray[sentenceCounter].length && sentenceCounter !== 5) {
         sentenceID.empty();
@@ -96,6 +97,7 @@ $(document).keydown(function (e) {
 $(document).keyup(function (e) {
     if ('Shift' === e.key) {
         upperKeyboard.hide();
+        lowerKeyboard.show();
     }
     $(`#${e.key.charCodeAt(0)}`).css("backgroundColor", "");
 })
